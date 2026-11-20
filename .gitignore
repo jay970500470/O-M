@@ -1,0 +1,11 @@
+﻿# DSH 插件依赖，升级/重装会重建，无需版本控制
+node_modules/
+.plugin-manager/
+
+# 日志与临时文件
+*.log
+*.tmp
+
+# 系统文件
+Thumbs.db
+desktop.ini

@@ -1,0 +1,1468 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: codearts
+    model: deepseek-v4.1-flash
+- id: ui-settings-account
+  name: "@deepseek-ai/dsh-client-ui-settings-account"
+  config:
+    version: 1
+    step: done
+    purpose: development
+    process: detailed
+    completion: completed
+    usage: detailed
+    developerTools: true
+- id: ui-chat
+  name: "@deepseek-ai/dsh-client-ui-chat"
+  config:
+    transcriptView: standard
+    performanceUsage: detailed
+- id: ui-settings
+  name: "@deepseek-ai/dsh-client-ui-settings"
+  config:
+    enabled: true
+- id: ui-theme
+  name: "@deepseek-ai/dsh-client-ui-theme"
+  config:
+    preference: light
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      tokenplan:
+        displayName: TokenPlan
+        api: openai-completions
+        apiKeyEnv: TOKENPLAN_API_KEY
+        baseURL: https://discovery-api.intern-ai.org.cn/v1
+        models:
+          - id: Atria-Dawn
+            name: TP · Atria-Dawn
+            contextWindow: 524288
+            maxTokens: 65536
+            input:
+              - text
+          - id: deepseek-v4.1-flash-1017
+            name: TP · DeepSeek-V4.1-Flash-1017
+            contextWindow: 1048576
+            maxTokens: 131072
+            input:
+              - text
+              - image
+          - id: glm-5.3
+            name: TP · GLM-5.3
+            contextWindow: 1048576
+            maxTokens: 131072
+            input:
+              - text
+- id: dsh-connect-workbuddy
+  name: dsh-connect-workbuddy
+  config:
+    regions:
+      cn:
+        enabled: true
+        showCreditsInMainUi: true
+        showNewModelsInMainUi: false
+        creditPosition: composer
+        lastCatalog:
+          - id: hy4std
+            name: Hy4
+            contextWindow: 960000
+            maxTokens: 64000
+            creditMultiplier: 0.29
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+          - id: hy4flash-free
+            name: Hy4 flash
+            contextWindow: 960000
+            maxTokens: 64000
+            creditMultiplier: 0
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+            descriptionZh: 更轻量、更高效的日常主力模型。适合日常办公等高频、规模化场景
+            descriptionEn: A leaner, more efficient everyday workhorse, ideal for
+              high-volume, large-scale tasks such as daily office work.
+            supportsToolCall: true
+            promos:
+              - id: hy4-flash-free-trial-202611
+                source: promotion
+                modelIds:
+                  - hy4flash-free
+                badge:
+                  label: 限时免费
+                  color: "#009273"
+                  display: activeOnly
+                hover:
+                  textZh: 11月16日–11月30日，每日赠送免费额度。
+                schedule:
+                  timezone: Asia/Shanghai
+                  validFrom: 1794758400000
+                  validUntil: 1796054400000
+                discount:
+                  multiplier: 0
+                  displayMode: replace
+                priority: 200
+          - id: hy4flash
+            name: Hy4 flash
+            contextWindow: 960000
+            maxTokens: 64000
+            creditMultiplier: 0.03
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+            descriptionZh: 更轻量、更高效的日常主力模型。适合日常办公等高频、规模化场景
+            descriptionEn: A leaner, more efficient everyday workhorse, ideal for
+              high-volume, large-scale tasks such as daily office work.
+            supportsToolCall: true
+          - id: deepseek-v4.1-flash
+            name: DeepSeek-V4.1-Flash
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.11
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+            promos:
+              - id: ds-discount-daytime-badge-202608
+                source: promotion
+                modelIds:
+                  - deepseek-v4-flash-ioa
+                  - deepseek-v4.1-flash
+                  - deepseek-v4-pro-ioa
+                  - deepseek-v4-flash
+                  - deepseek-v4-pro
+                badge:
+                  label: 夜间折扣
+                  color: "#009273"
+                hover:
+                  textZh: 周一至周五 09:00–12:00、14:00–18:00 属高峰原价，非高峰期积分5折
+                schedule:
+                  timezone: Asia/Shanghai
+                  daily:
+                    - start: 0:00
+                      end: 23:59
+                priority: 50
+          - id: glm-5.3
+            name: GLM-5.3
+            contextWindow: 1000000
+            maxTokens: 64000
+            creditMultiplier: 0.69
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: false
+            promos:
+              - id: tier-standard-2026q3
+                source: tier
+                modelIds:
+                  - glm-5.3
+                  - glm-5.3-flash
+                  - kimi-k2.8-preview
+                  - kimi-k3.1-pro
+                badge:
+                  label: 订阅优先
+                hover:
+                  textZh: 资源紧张，订阅会员享受优先调度。
+                  textEn: Resources are constrained, subscribers receive priority scheduling.
+                priority: 20
+          - id: glm-5.3-flash
+            name: GLM-5.3-Flash
+            contextWindow: 1000000
+            maxTokens: 131072
+            creditMultiplier: 0.08
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: false
+            promos:
+              - id: tier-standard-2026q3
+                source: tier
+                modelIds:
+                  - glm-5.3
+                  - glm-5.3-flash
+                  - kimi-k2.8-preview
+                  - kimi-k3.1-pro
+                badge:
+                  label: 订阅优先
+                hover:
+                  textZh: 资源紧张，订阅会员享受优先调度。
+                  textEn: Resources are constrained, subscribers receive priority scheduling.
+                priority: 20
+          - id: glm-5.2
+            name: GLM-5.2
+            contextWindow: 1000000
+            maxTokens: 64000
+            creditMultiplier: 0.79
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+                - xhigh
+              defaultEffort: high
+              canDisableThinking: true
+            promos:
+              - id: glm-52-night-discount-202607
+                source: promotion
+                modelIds:
+                  - glm-5.2
+                badge:
+                  label: 夜间折扣
+                  color: "#009273"
+                hover:
+                  textZh: 每晚 23:00—次日 8:00 积分限时立减，错峰用更省
+                schedule:
+                  timezone: Asia/Shanghai
+                  daily:
+                    - start: 23:00
+                      end: 7:50
+                discount:
+                  multiplier: 0.5
+                  displayMode: strikethrough
+                priority: 100
+              - id: glm-52-night-discount-daytime-badge-202607
+                source: promotion
+                modelIds:
+                  - glm-5.2
+                badge:
+                  label: 夜间折扣
+                  color: "#009273"
+                hover:
+                  textZh: 每晚 23:00—次日 8:00 积分限时立减，错峰用更省
+                schedule:
+                  timezone: Asia/Shanghai
+                  daily:
+                    - start: 7:50
+                      end: 23:00
+                priority: 50
+          - id: space-bunny
+            name: Space-Bunny
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.08
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: max
+              canDisableThinking: false
+            promos:
+              - id: space-bunny-discount-202610
+                source: promotion
+                modelIds:
+                  - space-bunny
+                badge:
+                  label: 限时折扣
+                  shortLabel: 折扣
+                  color: "#009273"
+                hover:
+                  textZh: 10月2日-10月7日，享限时折扣。
+                schedule:
+                  timezone: Asia/Shanghai
+                  validFrom: 1790870400000
+                  validUntil: 1791388800000
+                priority: 100
+          - id: minimax-m3.1-flash
+            name: MiniMax-M3.1-Flash
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.08
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: max
+              canDisableThinking: false
+          - id: kimi-k3.1-pro
+            name: Kimi-K3.1-Pro
+            contextWindow: 1000000
+            maxTokens: 32000
+            creditMultiplier: 0.97
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: false
+            promos:
+              - id: tier-standard-2026q3
+                source: tier
+                modelIds:
+                  - glm-5.3
+                  - glm-5.3-flash
+                  - kimi-k2.8-preview
+                  - kimi-k3.1-pro
+                badge:
+                  label: 订阅优先
+                hover:
+                  textZh: 资源紧张，订阅会员享受优先调度。
+                  textEn: Resources are constrained, subscribers receive priority scheduling.
+                priority: 20
+          - id: kimi-k3-1
+            name: Kimi-K3
+            contextWindow: 1000000
+            maxTokens: 32000
+            creditMultiplier: 1.62
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+          - id: kimi-k2.8-preview
+            name: Kimi-K2.8-Preview
+            contextWindow: 1000000
+            maxTokens: 64000
+            creditMultiplier: 0.77
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+            promos:
+              - id: tier-standard-2026q3
+                source: tier
+                modelIds:
+                  - glm-5.3
+                  - glm-5.3-flash
+                  - kimi-k2.8-preview
+                  - kimi-k3.1-pro
+                badge:
+                  label: 订阅优先
+                hover:
+                  textZh: 资源紧张，订阅会员享受优先调度。
+                  textEn: Resources are constrained, subscribers receive priority scheduling.
+                priority: 20
+          - id: deepseek-v4-pro
+            name: DeepSeek-V4-Pro
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.51
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+                - xhigh
+              defaultEffort: high
+              canDisableThinking: true
+            promos:
+              - id: ds-discount-daytime-badge-202608
+                source: promotion
+                modelIds:
+                  - deepseek-v4-flash-ioa
+                  - deepseek-v4.1-flash
+                  - deepseek-v4-pro-ioa
+                  - deepseek-v4-flash
+                  - deepseek-v4-pro
+                badge:
+                  label: 夜间折扣
+                  color: "#009273"
+                hover:
+                  textZh: 周一至周五 09:00–12:00、14:00–18:00 属高峰原价，非高峰期积分5折
+                schedule:
+                  timezone: Asia/Shanghai
+                  daily:
+                    - start: 0:00
+                      end: 23:59
+                priority: 50
+          - id: step-5-preview
+            name: Step-5-Preview
+            contextWindow: 1000000
+            maxTokens: 64000
+            creditMultiplier: 0.33
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+          - id: mimo-v2.6-pro
+            name: Xiaomi MiMo-V2.6-Pro
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.13
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+          - id: hy3
+            name: Hy3
+            contextWindow: 960000
+            maxTokens: 64000
+            creditMultiplier: 0
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+          - id: hy3-x
+            name: Hy3
+            contextWindow: 960000
+            maxTokens: 64000
+            creditMultiplier: 0.05
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+        enabledModelIds:
+          - deepseek-v4.1-flash
+          - glm-5.3-flash
+        imageModelIds:
+          - deepseek-v4.1-flash
+          - glm-5.3-flash
+          - space-bunny
+          - minimax-m3.1-flash
+          - kimi-k3-1
+        preferredImageModel: ""
+        cnBase: ""
+        imageToolEnabled: false
+        videoToolEnabled: false
+        preferredVideoModels: {}
+        offModelIds: []
+        imageSelectionExplicit: true
+        contextBudgets: {}
+        defaultThinkingEfforts: {}
+        pool:
+          enabled: true
+          targetModelId: deepseek-v4.1-flash
+          probeInputTokens: 0
+          memberAccountIds:
+            - 465bb10b647b7fd8239489ec
+          autoCheckin: true
+          orderAccountIds: []
+      global:
+        enabled: true
+        showCreditsInMainUi: true
+        showNewModelsInMainUi: false
+        creditPosition: composer
+        lastCatalog:
+          - id: deepseek-v4.1-flash
+            name: Deepseek-V4.1-Flash
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: false
+              offRefused: true
+          - id: deepseek-v4.1-flash-sg
+            name: Deepseek-V4.1-Flash
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.03
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: false
+              offRefused: true
+          - id: gpt-6-luna
+            name: GPT-6-Luna
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.07
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+              defaultEffort: high
+              canDisableThinking: false
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: glm-5.3-flash
+            name: GLM-5.3-Flash
+            contextWindow: 1000000
+            maxTokens: 32000
+            creditMultiplier: 0.08
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: false
+          - id: fast-model
+            name: Fast
+            contextWindow: 200000
+            maxTokens: 32000
+            creditMultiplier: 0.34
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: medium
+              canDisableThinking: true
+          - id: balanced-model
+            name: Balanced
+            contextWindow: 256000
+            maxTokens: 32000
+            creditMultiplier: 0.59
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: medium
+              canDisableThinking: true
+          - id: primary-model
+            name: Primary
+            contextWindow: 272000
+            maxTokens: 72000
+            creditMultiplier: 3.31
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+              offRefused: true
+          - id: hy4-preview
+            name: Hy4 Preview
+            contextWindow: 1000000
+            maxTokens: 64000
+            creditMultiplier: 0.29
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+          - id: hy3
+            name: Hy3
+            contextWindow: 192000
+            maxTokens: 64000
+            creditMultiplier: 0
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+          - id: gpt-6-astra
+            name: GPT-6-Astra
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 6.67
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+              offRefused: true
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gpt-6.1-sol
+            name: GPT-6.1-Sol
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 1.33
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+              defaultEffort: high
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gpt-6-sol
+            name: GPT-6-Sol
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 1.33
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+              defaultEffort: high
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gpt-5.6-sol
+            name: GPT-5.6-Sol
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 3.47
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+              offRefused: true
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gpt-5.6-terra
+            name: GPT-5.6-Terra
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 1.39
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+              offRefused: true
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gpt-5.6-luna
+            name: GPT-5.6-Luna
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.14
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+              offRefused: true
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gpt-5.5
+            name: GPT-5.5
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 3.31
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+              defaultEffort: high
+              canDisableThinking: false
+          - id: gpt-5.4
+            name: GPT-5.4
+            contextWindow: 272000
+            maxTokens: 72000
+            creditMultiplier: 1.65
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+              defaultEffort: high
+              canDisableThinking: false
+          - id: grok-4.7
+            name: Grok-4.7
+            contextWindow: 500000
+            maxTokens: 128000
+            creditMultiplier: 1.9
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+              defaultEffort: high
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gemini-3.8-flash
+            name: Gemini-3.8-Flash
+            contextWindow: 1000000
+            maxTokens: 65536
+            creditMultiplier: 0.95
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+              defaultEffort: medium
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: glm-5.3
+            name: GLM-5.3
+            contextWindow: 1000000
+            maxTokens: 48000
+            creditMultiplier: 0.69
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+          - id: glm-5.2
+            name: GLM-5.2
+            contextWindow: 1000000
+            maxTokens: 48000
+            creditMultiplier: 0.79
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+                - xhigh
+              defaultEffort: high
+              canDisableThinking: true
+          - id: minimax-m3.1-flash
+            name: MiniMax-M3.1-Flash
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.08
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: max
+              canDisableThinking: false
+          - id: kimi-k3.1-pro
+            name: Kimi-K3.1-Pro
+            contextWindow: 1000000
+            maxTokens: 32000
+            creditMultiplier: 0.97
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: false
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: kimi-k3.1-pro-highspeed
+            name: Kimi-K3.1-Pro-Highspeed
+            contextWindow: 1000000
+            maxTokens: 32000
+            creditMultiplier: 1.56
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: false
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: kimi-k3
+            name: Kimi-K3
+            contextWindow: 1000000
+            maxTokens: 32000
+            creditMultiplier: 1.62
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: medium
+              canDisableThinking: true
+          - id: max-model
+            name: Max
+            contextWindow: 272000
+            maxTokens: 72000
+            creditMultiplier: 1.33
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+          - id: hy4std
+            name: Hy4
+            contextWindow: 960000
+            maxTokens: 64000
+            creditMultiplier: 0.29
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+          - id: hy4flash
+            name: Hy4 flash
+            contextWindow: 960000
+            maxTokens: 64000
+            creditMultiplier: 0.03
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+          - id: hy4flash-free
+            name: Hy4 flash
+            contextWindow: 960000
+            maxTokens: 64000
+            creditMultiplier: 0
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - high
+              defaultEffort: high
+              canDisableThinking: false
+            promos:
+              - id: hy4-flash-free-trial-202611
+                source: promotion
+                modelIds:
+                  - hy4flash-free
+                badge:
+                  label: Free now
+                  color: "#FF0000"
+                  display: activeOnly
+                hover:
+                  textZh: "Nov 16–30: Receive a daily free allowance. Subscribers enjoy higher
+                    quotas."
+                schedule:
+                  timezone: Asia/Shanghai
+                  validFrom: 1794758400000
+                  validUntil: 1796054400000
+                discount:
+                  multiplier: 0
+                  displayMode: replace
+                priority: 200
+          - id: gpt-6.2-astra
+            name: GPT-6.2-Astra
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 4.34
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gpt-6.2-sol
+            name: GPT-6.2-Sol
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 1.09
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gpt-6.1-terra
+            name: GPT-6.1-Terra
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.54
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gemini-4-carbon
+            name: Gemini-4-Carbon
+            contextWindow: 1000000
+            maxTokens: 65536
+            creditMultiplier: 2.04
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: medium
+              canDisableThinking: true
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: gemini-4-argon
+            name: Gemini-4-Argon
+            contextWindow: 1000000
+            maxTokens: 65536
+            creditMultiplier: 2.04
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+                - max
+              defaultEffort: medium
+              canDisableThinking: true
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+        enabledModelIds:
+          - deepseek-v4.1-flash
+          - deepseek-v4.1-flash-sg
+        imageModelIds:
+          - deepseek-v4.1-flash
+          - glm-5.3-flash
+          - minimax-m3.1-flash
+          - hy4std
+        preferredImageModel: ""
+        cnBase: ""
+        imageToolEnabled: false
+        videoToolEnabled: false
+        preferredVideoModels: {}
+        offModelIds: []
+        imageSelectionExplicit: true
+        contextBudgets: {}
+        defaultThinkingEfforts: {}
+        pool:
+          enabled: true
+          targetModelId: ""
+          probeInputTokens: 0
+          memberAccountIds:
+            - e44e62b3dcc4513e9130fab5
+          autoCheckin: false
+          orderAccountIds: []
+- id: permission
+  name: "@deepseek-ai/dsh-permission-presets"
+  config:
+    presets:
+      read-only:
+        sandbox: read-only
+        approval: ask
+      workspace-write:
+        sandbox: workspace-write
+        approval: ask
+      danger-full-access:
+        sandbox: danger-full-access
+        approval: never
+    defaultPreset: danger-full-access

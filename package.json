@@ -1,0 +1,22 @@
+{
+  "name": "dsh-profile-desktop",
+  "private": true,
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@deepseek-ai/dsh-base",
+        "@deepseek-ai/dsh-web-app",
+        "@deepseek-ai/dsh-experimental-forge-bundle",
+        "dsh-our-free-model",
+        "dsh-connect-workbuddy",
+        "@deepseek-ai/dsh-experimental-cot-translation-bundle",
+        "dsh-free-search"
+      ]
+    }
+  },
+  "dependencies": {
+    "dsh-connect-workbuddy": "5.24.8",
+    "dsh-free-search": "0.9.73",
+    "dsh-our-free-model": "^2.1.0"
+  }
+}

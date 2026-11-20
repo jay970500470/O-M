@@ -1,0 +1,104 @@
+# Your patch layer for this dsh profile, applied after every bundle layer:
+# a top-level YAML array of loader patch entries (id-targeted config
+# overrides, disables, and insert lists; `!!js` expressions allowed).
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: deepseek-account
+    model: deepseek-flash
+    reasoningEffort: high
+- id: ui-settings-account
+  name: "@deepseek-ai/dsh-client-ui-settings-account"
+  config:
+    version: 1
+    step: done
+    purpose: development
+    process: detailed
+    completion: completed
+    usage: detailed
+    developerTools: true
+- id: ui-chat
+  name: "@deepseek-ai/dsh-client-ui-chat"
+  config:
+    transcriptView: detailed
+    performanceUsage: detailed
+- id: ui-settings
+  name: "@deepseek-ai/dsh-client-ui-settings"
+  config:
+    enabled: true
+- id: ui-theme
+  name: "@deepseek-ai/dsh-client-ui-theme"
+  config:
+    preference: light
+- id: llm-pi-ai
+  name: "@deepseek-ai/dsh-llm-pi-ai"
+  config:
+    providers:
+      oc-ferry:
+        displayName: OC Ferry
+        api: openai-completions
+        baseURL: http://127.0.0.1:41980/v1
+        headers:
+          Authorization: Bearer 769a4bcb073c5ef5dfa4c1e5b9110589741f9cb8b93b3a4faf67cd835268531d
+        models:
+          - id: opencode/beam-free
+            name: OC · Beam Free
+            input:
+              - text
+            contextWindow: 1048576
+            maxTokens: 131072
+          - id: opencode/deepseek-v4.1-flash-free
+            name: OC · DeepSeek V4.1 Flash Free
+            input:
+              - text
+              - image
+            contextWindow: 200000
+            maxTokens: 32000
+          - id: opencode/glm-5.3-flash-free
+            name: OC · GLM-5.3-Flash Free
+            input:
+              - text
+              - image
+            contextWindow: 200000
+            maxTokens: 32000
+          - id: opencode/inkling-2-small-free
+            name: OC · Inkling 2 Small Free
+            input:
+              - text
+              - image
+            contextWindow: 1048576
+            maxTokens: 131072
+          - id: opencode/longcat-2.5-free
+            name: OC · LongCat 2.5 Free
+            input:
+              - text
+              - image
+            contextWindow: 1000000
+            maxTokens: 262144
+          - id: opencode/mimo-v2.6-flash-free
+            name: OC · MiMo-V2.6-Flash Free
+            input:
+              - text
+              - image
+            contextWindow: 200000
+            maxTokens: 32000
+          - id: opencode/minimax-m3.1-flash-free
+            name: OC · MiniMax M3.1 Flash Free
+            input:
+              - text
+              - image
+            contextWindow: 1000000
+            maxTokens: 512000
+          - id: opencode/nemotron-3.5-lightning-free
+            name: OC · Nemotron 3.5 Lightning Free
+            input:
+              - text
+            contextWindow: 262144
+            maxTokens: 262144
+          - id: opencode/nemotron-3.5-super-vl-free
+            name: OC · Nemotron 3.5 Super VL Free
+            input:
+              - text
+              - image
+            contextWindow: 1048576
+            maxTokens: 131072
