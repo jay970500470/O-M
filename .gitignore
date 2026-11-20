@@ -1,4 +1,4 @@
-﻿# DSH 插件依赖，升级/重装会重建，无需版本控制
+# DSH profile - 插件依赖，升级/重装会自动重建，无需版本控制
 node_modules/
 .plugin-manager/
 
