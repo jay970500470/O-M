@@ -10,13 +10,15 @@
         "dsh-our-free-model",
         "dsh-connect-workbuddy",
         "@deepseek-ai/dsh-experimental-cot-translation-bundle",
-        "dsh-free-search"
+        "dsh-free-search",
+        "dsh-mnemon"
       ]
     }
   },
   "dependencies": {
     "dsh-connect-workbuddy": "5.24.8",
     "dsh-free-search": "0.9.73",
+    "dsh-mnemon": "0.5.50",
     "dsh-our-free-model": "^2.1.0"
   }
 }

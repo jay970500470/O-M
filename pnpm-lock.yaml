@@ -14,6 +14,9 @@ importers:
       dsh-free-search:
         specifier: 0.9.73
         version: 0.9.73(@deepseek-ai/schemastery@3.19.0)
+      dsh-mnemon:
+        specifier: 0.5.50
+        version: 0.5.50
       dsh-our-free-model:
         specifier: ^2.1.0
         version: 2.1.0(@deepseek-ai/schemastery@3.19.0)
@@ -82,6 +85,162 @@ packages:
       react:
         optional: true
 
+  dsh-mnemon-provider-byterover@0.5.8:
+    resolution: {integrity: sha512-RN/cbUG/IgKPyRmQD/2x6l1jmpLF3ujwrfdlRKG8ghYnREfw4O//JChTdtJOREdIz8y5xBoRTOQ8XAoFv5qMng==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon-source-memory-spaces: ^0.5.1
+
+  dsh-mnemon-provider-hindsight@0.5.7:
+    resolution: {integrity: sha512-sOEThpl56k6DuqSvOrma9ZFMAFmfll/XuUOLZkJ/4nB4M5z/fYvKMTMAmJ2PXUhWPO3KEnOj5m+V5axmrZefbg==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon-source-memory-spaces: ^0.5.1
+
+  dsh-mnemon-provider-holographic@0.5.8:
+    resolution: {integrity: sha512-mLKSE88zgBarQGr/pvtReYjrcl2uDUNkXfVlyJ3nhGykZ+jiSvCnc6G+TrhOSQtRadRwAqdrAh343RB7EwVCLA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon-source-memory-spaces: ^0.5.1
+
+  dsh-mnemon-provider-honcho@0.5.5:
+    resolution: {integrity: sha512-TKtpODsQ6MeLZ1zCgca37s656u9q89M1SimTqSvT6/GCRiqi9A0mAbqAj1uzAMcbTuHOYAr3hFSAQYo55TbcXQ==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon-source-memory-spaces: ^0.5.1
+
+  dsh-mnemon-provider-mem0@0.5.5:
+    resolution: {integrity: sha512-rxCSNx/TTMeaj7BjneMYtQOUjzNFiYB/7rFPZitBzQGdJmzVrm1KVDPZplXvHZaZ2XdQ86yfT1R+Le7NLjvrsQ==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon-source-memory-spaces: ^0.5.1
+
+  dsh-mnemon-provider-mnemon-native@0.5.11:
+    resolution: {integrity: sha512-rS/XVk6kd6JWXg+qM2zzm+ycRWQrTg9aBBSn56ZgJbL5y8l1+LTBTPslc1rJ4tWSHwtqYPBjWmeY9IYvRWMLMA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon-source-memory-spaces: ^0.5.1
+
+  dsh-mnemon-provider-openviking@0.5.11:
+    resolution: {integrity: sha512-Ccdrrf1Rfcpb6Joev+3eB9geph+v9lYmflbbn3PJB1SffEf/iIcRUSavQ1AHe0oAj/i1KEh2/tFhbzMHP74hMw==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon-source-memory-spaces: ^0.5.1
+
+  dsh-mnemon-provider-retaindb@0.5.7:
+    resolution: {integrity: sha512-nC6ycLguco8eTKU4xWmrNagXpNzy4b0V5jqoEx0PqstitgwRZDbIbhuPYedtNGK/euKUmgGsWrHmFSD2PWRlng==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon-source-memory-spaces: ^0.5.1
+
+  dsh-mnemon-provider-supermemory@0.5.6:
+    resolution: {integrity: sha512-7kXlNlq+xOXQb9GOE+KyW73gQJRCCivUgvvNb2J2dvaJWUgPZrOrt/CLUocS4hpgqcpc8jOCRcs4gzbNwJZw8A==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon-source-memory-spaces: ^0.5.1
+
+  dsh-mnemon-source-documents@0.6.3:
+    resolution: {integrity: sha512-L4xPXPGxO8wWb91tYTDzNbigFhDBFMRjRH/2uTmfu2cS2HW6B4GTseLqkJGypt3NwCv+ZXkDeR3OqwCQcTylOA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon: ^0.5.40
+      react: ^18.2.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+
+  dsh-mnemon-source-memory-spaces@0.5.31:
+    resolution: {integrity: sha512-kDq4puf9XRlysWTOUkriG2MzCbBWVreQmEzJW2I4tzQByus2RLwEOIVyEEh1id31+AZChcWAGRQ2VB3ZPULx2Q==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon: ^0.5.19
+      react: ^18.2.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+
+  dsh-mnemon-source-runtime@0.5.23:
+    resolution: {integrity: sha512-SkRwdYEMO8Ye40HU5Q5NjexwR6aQ60E71DfAYzw+fCsQ1xJ8g4mHRhXb+jE/9KkTvDpS2S+ihKt1arlUQPPOmA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon: ^0.5.43
+      react: ^18.2.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+
+  dsh-mnemon-source-skills@0.5.16:
+    resolution: {integrity: sha512-bQicQwZVN0lAACAQGs2JJmWalueYJKJ+4GQNmpZChfGaqIBX9KBCyyjkaM+BPBA+JaW2QZt1KrmfQ29DjMJEzg==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon: ^0.5.37
+      react: ^18.2.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+
+  dsh-mnemon-strategy-auto-capture@0.5.6:
+    resolution: {integrity: sha512-1bcWCvNPAfQh7ROnrx3/Z6l4Gi7qD7bngOJ/PwkIo4sEPk5pGSMEWlMdsETYijVMY+/XUN9H1jZAN+NXu2vDiw==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon: ^0.5.17
+
+  dsh-mnemon-strategy-default-three-tier@0.5.15:
+    resolution: {integrity: sha512-T9xUE2HKhIEfxSJxPusobsF7wrh8oYDLTCJrtvJFFjkjr13sKO9fs1a94L4eWdTuxIsVbbuu1zhdn4kKhphCHA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon: ^0.5.43
+
+  dsh-mnemon-strategy-general@0.5.3:
+    resolution: {integrity: sha512-xW1rfxfJGd5qQH1HdWjyXkIfYIqB1r/9JjCyrwPn2hVkwNgS/30QbupAASyhokDOYyfSU4LF5jyjuQ+X+5FEiQ==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon: ^0.5.43
+
+  dsh-mnemon-strategy-light-context@0.5.7:
+    resolution: {integrity: sha512-B8A6LTa/bFX1qfJ2d65Aep1D0fZJByVselj1RY4X2ETrIqs/Ods80hn6iEsZzuHy+/My+wxuBBLkaKyKJJsa6A==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon: ^0.5.17
+
+  dsh-mnemon-strategy-scoped@0.5.6:
+    resolution: {integrity: sha512-XpoinvPiiynS4GByWDcbKCl3iQF/i1wM74rbdeIVGhyUpbi63NJUq8AzvGbOWVjiryDii2McmgJL0JflkD1xcA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.1
+      dsh-mnemon: ^0.5.17
+
+  dsh-mnemon@0.5.50:
+    resolution: {integrity: sha512-0vMdl0RQsk+ixKBXnt66zgX1/20vlPvETJ3T1eEr9s2H/VF6mjnzi5WF+140aGOQ0250TOT4sDWDTU+CIo7DoA==}
+    engines: {dsh: '>=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.1 <0.3.0-0', node: '>=20'}
+    hasBin: true
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.4
+      '@deepseek-ai/dsh-app-boot': '>=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.1 <0.3.0-0'
+      '@deepseek-ai/dsh-typert-protocol': '>=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.1 <0.3.0-0'
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    peerDependenciesMeta:
+      '@deepseek-ai/dsh-app-boot':
+        optional: true
+
   dsh-our-free-model@2.1.0:
     resolution: {integrity: sha512-52W78eb+htOGTCTtHnGUzOm5Izdt14DT8uN2qgY3VCiUQHVWd2OUuUpqeRLuBBvaW6B+MmI5BI+ms4jEqDAOwA==}
     engines: {node: ^22.19.0 || >=24.0.0}
@@ -92,6 +251,17 @@ packages:
       '@deepseek-ai/dsh-credentials': ^0.1.2-rc.1 || ^0.1.7-rc.2 || ^0.2.0-rc.1
       '@deepseek-ai/dsh-llm': ^0.1.2-rc.1 || ^0.1.7-rc.2 || ^0.2.0-rc.1
       '@deepseek-ai/schemastery': ^3.18.4
+
+  fflate@0.8.3:
+    resolution: {integrity: sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==}
+
+  yaml@2.9.1:
+    resolution: {integrity: sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==}
+    engines: {node: '>= 14.6'}
+    hasBin: true
+
+  zod@4.6.7:
+    resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
 snapshots:
 
@@ -112,6 +282,114 @@ snapshots:
     optionalDependencies:
       '@deepseek-ai/schemastery': 3.19.0
 
+  dsh-mnemon-provider-byterover@0.5.8(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50)):
+    dependencies:
+      dsh-mnemon-source-memory-spaces: 0.5.31(dsh-mnemon@0.5.50)
+
+  dsh-mnemon-provider-hindsight@0.5.7(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50)):
+    dependencies:
+      dsh-mnemon-source-memory-spaces: 0.5.31(dsh-mnemon@0.5.50)
+
+  dsh-mnemon-provider-holographic@0.5.8(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50)):
+    dependencies:
+      dsh-mnemon-source-memory-spaces: 0.5.31(dsh-mnemon@0.5.50)
+
+  dsh-mnemon-provider-honcho@0.5.5(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50)):
+    dependencies:
+      dsh-mnemon-source-memory-spaces: 0.5.31(dsh-mnemon@0.5.50)
+
+  dsh-mnemon-provider-mem0@0.5.5(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50)):
+    dependencies:
+      dsh-mnemon-source-memory-spaces: 0.5.31(dsh-mnemon@0.5.50)
+
+  dsh-mnemon-provider-mnemon-native@0.5.11(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50)):
+    dependencies:
+      dsh-mnemon-source-memory-spaces: 0.5.31(dsh-mnemon@0.5.50)
+
+  dsh-mnemon-provider-openviking@0.5.11(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50)):
+    dependencies:
+      dsh-mnemon-source-memory-spaces: 0.5.31(dsh-mnemon@0.5.50)
+
+  dsh-mnemon-provider-retaindb@0.5.7(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50)):
+    dependencies:
+      dsh-mnemon-source-memory-spaces: 0.5.31(dsh-mnemon@0.5.50)
+
+  dsh-mnemon-provider-supermemory@0.5.6(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50)):
+    dependencies:
+      dsh-mnemon-source-memory-spaces: 0.5.31(dsh-mnemon@0.5.50)
+
+  dsh-mnemon-source-documents@0.6.3(dsh-mnemon@0.5.50):
+    dependencies:
+      '@deepseek-ai/schemastery': 3.19.0
+      dsh-mnemon: 0.5.50
+
+  dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50):
+    dependencies:
+      '@deepseek-ai/schemastery': 3.19.0
+      dsh-mnemon: 0.5.50
+
+  dsh-mnemon-source-runtime@0.5.23(dsh-mnemon@0.5.50):
+    dependencies:
+      '@deepseek-ai/schemastery': 3.19.0
+      dsh-mnemon: 0.5.50
+
+  dsh-mnemon-source-skills@0.5.16(dsh-mnemon@0.5.50):
+    dependencies:
+      dsh-mnemon: 0.5.50
+      yaml: 2.9.1
+
+  dsh-mnemon-strategy-auto-capture@0.5.6(dsh-mnemon@0.5.50):
+    dependencies:
+      dsh-mnemon: 0.5.50
+
+  dsh-mnemon-strategy-default-three-tier@0.5.15(dsh-mnemon@0.5.50):
+    dependencies:
+      dsh-mnemon: 0.5.50
+
+  dsh-mnemon-strategy-general@0.5.3(dsh-mnemon@0.5.50):
+    dependencies:
+      dsh-mnemon: 0.5.50
+
+  dsh-mnemon-strategy-light-context@0.5.7(dsh-mnemon@0.5.50):
+    dependencies:
+      dsh-mnemon: 0.5.50
+
+  dsh-mnemon-strategy-scoped@0.5.6(dsh-mnemon@0.5.50):
+    dependencies:
+      dsh-mnemon: 0.5.50
+
+  dsh-mnemon@0.5.50:
+    dependencies:
+      '@deepseek-ai/cosmokit': 1.9.0
+      '@deepseek-ai/schemastery': 3.19.0
+      dsh-mnemon-provider-byterover: 0.5.8(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50))
+      dsh-mnemon-provider-hindsight: 0.5.7(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50))
+      dsh-mnemon-provider-holographic: 0.5.8(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50))
+      dsh-mnemon-provider-honcho: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50))
+      dsh-mnemon-provider-mem0: 0.5.5(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50))
+      dsh-mnemon-provider-mnemon-native: 0.5.11(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50))
+      dsh-mnemon-provider-openviking: 0.5.11(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50))
+      dsh-mnemon-provider-retaindb: 0.5.7(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50))
+      dsh-mnemon-provider-supermemory: 0.5.6(dsh-mnemon-source-memory-spaces@0.5.31(dsh-mnemon@0.5.50))
+      dsh-mnemon-source-documents: 0.6.3(dsh-mnemon@0.5.50)
+      dsh-mnemon-source-memory-spaces: 0.5.31(dsh-mnemon@0.5.50)
+      dsh-mnemon-source-runtime: 0.5.23(dsh-mnemon@0.5.50)
+      dsh-mnemon-source-skills: 0.5.16(dsh-mnemon@0.5.50)
+      dsh-mnemon-strategy-auto-capture: 0.5.6(dsh-mnemon@0.5.50)
+      dsh-mnemon-strategy-default-three-tier: 0.5.15(dsh-mnemon@0.5.50)
+      dsh-mnemon-strategy-general: 0.5.3(dsh-mnemon@0.5.50)
+      dsh-mnemon-strategy-light-context: 0.5.7(dsh-mnemon@0.5.50)
+      dsh-mnemon-strategy-scoped: 0.5.6(dsh-mnemon@0.5.50)
+      fflate: 0.8.3
+      yaml: 2.9.1
+      zod: 4.6.7
+
   dsh-our-free-model@2.1.0(@deepseek-ai/schemastery@3.19.0):
     dependencies:
       '@deepseek-ai/schemastery': 3.19.0
+
+  fflate@0.8.3: {}
+
+  yaml@2.9.1: {}
+
+  zod@4.6.7: {}
