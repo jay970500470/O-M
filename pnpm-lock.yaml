@@ -12,8 +12,8 @@ importers:
         specifier: 5.24.8
         version: 5.24.8
       dsh-free-search:
-        specifier: 0.9.73
-        version: 0.9.73(@deepseek-ai/schemastery@3.19.0)
+        specifier: 0.9.82
+        version: 0.9.82(@deepseek-ai/schemastery@3.19.0)
       dsh-mnemon:
         specifier: 0.5.50
         version: 0.5.50
@@ -48,14 +48,15 @@ packages:
       '@deepseek-ai/dsh-llm': '>=0.1.7-rc.1 <0.3.0-0'
       '@deepseek-ai/dsh-llm-pi-ai': '>=0.1.7-rc.1 <0.3.0-0'
       '@deepseek-ai/dsh-settings': '>=0.1.7-rc.1 <0.3.0-0'
+      '@deepseek-ai/schemastery': '>=3.18.1-rc.1 <4.0.0 || >=3.18.2 <4.0.0'
       '@earendil-works/pi-ai': '>=0.85.0 <0.88.0 || >=1.0.0-0 <2.0.0'
       react: ^18.2.0
     peerDependenciesMeta:
       '@earendil-works/pi-ai':
         optional: true
 
-  dsh-free-search@0.9.73:
-    resolution: {integrity: sha512-EKvGqQI4mb1vW0DQTM4spb8igR1mD5yr4t3etxVk6484gNt7BrIQdzxTvT0mbkDn9QsT1RcCyoCLFhiohJS20Q==}
+  dsh-free-search@0.9.82:
+    resolution: {integrity: sha512-mV/ks9ezFC3P/NLtEfPPumXkV8wtpka2eSe4l8opmPJ843HJjgA5WP0L7GoCG1cWm3FwKawEY75NQyQi/HRYfA==}
     engines: {dsh: '>=0.2.1-rc.2 <0.4.0-0', node: '>=20'}
     hasBin: true
     peerDependencies:
@@ -278,7 +279,7 @@ snapshots:
     dependencies:
       '@deepseek-ai/schemastery': 3.19.0
 
-  dsh-free-search@0.9.73(@deepseek-ai/schemastery@3.19.0):
+  dsh-free-search@0.9.82(@deepseek-ai/schemastery@3.19.0):
     optionalDependencies:
       '@deepseek-ai/schemastery': 3.19.0
 
