@@ -4,7 +4,7 @@
 - id: agent-default-model
   name: "@deepseek-ai/dsh-agent-default-model"
   config:
-    provider: codearts
+    provider: workbuddy
     model: deepseek-v4.1-flash
 - id: ui-settings-account
   name: "@deepseek-ai/dsh-client-ui-settings-account"
@@ -488,89 +488,6 @@
         showNewModelsInMainUi: false
         creditPosition: composer
         lastCatalog:
-          - id: deepseek-v4.1-flash
-            name: Deepseek-V4.1-Flash
-            contextWindow: 1000000
-            maxTokens: 128000
-            creditMultiplier: 0
-            supportsImages: true
-            reasoning:
-              supportedEfforts:
-                - low
-                - high
-                - max
-              defaultEffort: high
-              canDisableThinking: false
-              offRefused: true
-          - id: deepseek-v4.1-flash-sg
-            name: Deepseek-V4.1-Flash
-            contextWindow: 1000000
-            maxTokens: 128000
-            creditMultiplier: 0.03
-            supportsImages: true
-            reasoning:
-              supportedEfforts:
-                - low
-                - high
-                - max
-              defaultEffort: high
-              canDisableThinking: false
-              offRefused: true
-          - id: gpt-6-luna
-            name: GPT-6-Luna
-            contextWindow: 1000000
-            maxTokens: 128000
-            creditMultiplier: 0.07
-            supportsImages: true
-            reasoning:
-              supportedEfforts:
-                - low
-                - medium
-                - high
-                - xhigh
-              defaultEffort: high
-              canDisableThinking: false
-            promos:
-              - id: gpt-pro-only
-                source: tier
-                modelIds:
-                  - gpt-6.2-astra
-                  - gpt-6-astra
-                  - gpt-6.2-sol
-                  - gpt-6.1-sol
-                  - gpt-6-sol
-                  - gpt-6.1-terra
-                  - gpt-6-luna
-                  - gpt-5.6-sol
-                  - gpt-5.6-terra
-                  - gpt-5.6-luna
-                  - grok-4.7
-                  - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
-                  - kimi-k3.1-pro
-                  - kimi-k3.1-pro-highspeed
-                badge:
-                  label: Pro Only
-                  labelEn: Pro Only
-                  color: "#009273"
-                hover:
-                  textZh: 模型仅面向 Pro 用户开放。
-                  textEn: Exclusive to Pro subscribers.
-                priority: 200
-          - id: glm-5.3-flash
-            name: GLM-5.3-Flash
-            contextWindow: 1000000
-            maxTokens: 32000
-            creditMultiplier: 0.08
-            supportsImages: true
-            reasoning:
-              supportedEfforts:
-                - low
-                - high
-                - max
-              defaultEffort: high
-              canDisableThinking: false
           - id: fast-model
             name: Fast
             contextWindow: 200000
@@ -616,7 +533,6 @@
                 - max
               defaultEffort: high
               canDisableThinking: true
-              offRefused: true
           - id: hy4-preview
             name: Hy4 Preview
             contextWindow: 1000000
@@ -640,6 +556,30 @@
                 - high
               defaultEffort: high
               canDisableThinking: false
+          - id: deepseek-v4.1-flash
+            name: Deepseek-V4.1-Flash
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+          - id: deepseek-v4.1-flash-sg
+            name: Deepseek-V4.1-Flash
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.03
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
           - id: gpt-6-astra
             name: GPT-6-Astra
             contextWindow: 1000000
@@ -655,7 +595,6 @@
                 - max
               defaultEffort: high
               canDisableThinking: true
-              offRefused: true
             promos:
               - id: gpt-pro-only
                 source: tier
@@ -766,6 +705,47 @@
                   textZh: 模型仅面向 Pro 用户开放。
                   textEn: Exclusive to Pro subscribers.
                 priority: 200
+          - id: gpt-6-luna
+            name: GPT-6-Luna
+            contextWindow: 1000000
+            maxTokens: 128000
+            creditMultiplier: 0.07
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - medium
+                - high
+                - xhigh
+              defaultEffort: high
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - gemini-4-carbon
+                  - gemini-4-argon
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
           - id: gpt-5.6-sol
             name: GPT-5.6-Sol
             contextWindow: 1000000
@@ -781,7 +761,6 @@
                 - max
               defaultEffort: high
               canDisableThinking: true
-              offRefused: true
             promos:
               - id: gpt-pro-only
                 source: tier
@@ -825,7 +804,6 @@
                 - max
               defaultEffort: high
               canDisableThinking: true
-              offRefused: true
             promos:
               - id: gpt-pro-only
                 source: tier
@@ -869,7 +847,6 @@
                 - max
               defaultEffort: high
               canDisableThinking: true
-              offRefused: true
             promos:
               - id: gpt-pro-only
                 source: tier
@@ -1007,6 +984,19 @@
                   textZh: 模型仅面向 Pro 用户开放。
                   textEn: Exclusive to Pro subscribers.
                 priority: 200
+          - id: glm-5.3-flash
+            name: GLM-5.3-Flash
+            contextWindow: 1000000
+            maxTokens: 32000
+            creditMultiplier: 0.08
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: true
           - id: glm-5.3
             name: GLM-5.3
             contextWindow: 1000000
@@ -1466,3 +1456,8 @@
         sandbox: danger-full-access
         approval: never
     defaultPreset: danger-full-access
+- id: web
+  name: "@deepseek-ai/dsh-web"
+  config:
+    fetchProvider: fs-quality-fetch
+    searchProvider: ddg
