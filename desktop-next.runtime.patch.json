@@ -1,0 +1,31 @@
+[
+  {
+    "id": "desktop-next-webserver",
+    "config": {
+      "host": "127.0.0.1",
+      "port": 0
+    }
+  },
+  {
+    "id": "connection",
+    "config": {
+      "trustedHosts": [
+        "192.168.18.161"
+      ]
+    }
+  },
+  {
+    "id": "workspace-dependencies",
+    "disabled": false,
+    "config": {
+      "source": "E:\\deepseek\\2\\DSH NEXT\\resources\\runtime\\x64\\primary-runtime",
+      "root": "C:\\Users\\jay\\.dsh\\dsh-runtimes\\dsh-next-primary-runtime"
+    }
+  },
+  {
+    "id": "skill-office",
+    "config": {
+      "pythonEnvironment": "workspace-dependencies"
+    }
+  }
+]

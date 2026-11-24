@@ -8,15 +8,23 @@
         "@deepseek-ai/dsh-web-app",
         "@deepseek-ai/dsh-experimental-forge-bundle",
         "dsh-our-free-model",
-        "dsh-connect-workbuddy",
         "@deepseek-ai/dsh-experimental-cot-translation-bundle",
         "dsh-free-search",
-        "dsh-mnemon"
+        "dsh-mnemon",
+        "dshmarket",
+        "@agents-anywhere/dsh-bridge-next",
+        "dsh-connect-workbuddy"
       ]
+    },
+    "desktopNextScheduleBundle": 2,
+    "desktopNextPlugins": 1,
+    "desktopNextOnboarding": {
+      "version": 1,
+      "outcome": "completed"
     }
   },
   "dependencies": {
-    "dsh-connect-workbuddy": "5.24.8",
+    "dsh-connect-workbuddy": "5.31.2",
     "dsh-free-search": "0.9.82",
     "dsh-mnemon": "0.5.50",
     "dsh-our-free-model": "^2.1.0"

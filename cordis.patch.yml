@@ -4,8 +4,8 @@
 - id: agent-default-model
   name: "@deepseek-ai/dsh-agent-default-model"
   config:
-    provider: workbuddy
-    model: deepseek-v4.1-flash
+    provider: raccoon
+    model: sn-deepseek-v4-1-flash-1017
 - id: ui-settings-account
   name: "@deepseek-ai/dsh-client-ui-settings-account"
   config:
@@ -481,6 +481,8 @@
           memberAccountIds:
             - 465bb10b647b7fd8239489ec
           autoCheckin: true
+          growthRedeem: true
+          growthActivity: true
           orderAccountIds: []
       global:
         enabled: true
@@ -611,8 +613,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -652,8 +653,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -693,8 +693,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -734,8 +733,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -777,8 +775,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -820,8 +817,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -863,8 +859,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -932,8 +927,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -972,8 +966,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -1066,8 +1059,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -1107,8 +1099,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -1233,8 +1224,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -1276,8 +1266,7 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -1319,8 +1308,51 @@
                   - gpt-5.6-luna
                   - grok-4.7
                   - gemini-3.8-flash
-                  - gemini-4-carbon
-                  - gemini-4-argon
+                  - glm-5.4
+                  - kimi-k3.1-pro
+                  - kimi-k3.1-pro-highspeed
+                badge:
+                  label: Pro Only
+                  labelEn: Pro Only
+                  color: "#009273"
+                hover:
+                  textZh: 模型仅面向 Pro 用户开放。
+                  textEn: Exclusive to Pro subscribers.
+                priority: 200
+          - id: glm-5.4
+            name: GLM-5.4
+            contextWindow: 1000000
+            maxTokens: 32768
+            creditMultiplier: 0.69
+            supportsImages: true
+            reasoning:
+              supportedEfforts:
+                - low
+                - high
+                - max
+              defaultEffort: high
+              canDisableThinking: true
+            descriptionZh: 原生多模态模型，擅长视觉理解与专业任务
+            descriptionEn: Native multimodal model, excelling at visual understanding and
+              professional tasks.
+            supportsToolCall: true
+            promos:
+              - id: gpt-pro-only
+                source: tier
+                modelIds:
+                  - gpt-6.2-astra
+                  - gpt-6-astra
+                  - gpt-6.2-sol
+                  - gpt-6.1-sol
+                  - gpt-6-sol
+                  - gpt-6.1-terra
+                  - gpt-6-luna
+                  - gpt-5.6-sol
+                  - gpt-5.6-terra
+                  - gpt-5.6-luna
+                  - grok-4.7
+                  - gemini-3.8-flash
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -1364,6 +1396,7 @@
                   - gemini-3.8-flash
                   - gemini-4-carbon
                   - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -1385,10 +1418,7 @@
                 - low
                 - medium
                 - high
-                - xhigh
-                - max
               defaultEffort: medium
-              canDisableThinking: true
             promos:
               - id: gpt-pro-only
                 source: tier
@@ -1407,6 +1437,7 @@
                   - gemini-3.8-flash
                   - gemini-4-carbon
                   - gemini-4-argon
+                  - glm-5.4
                   - kimi-k3.1-pro
                   - kimi-k3.1-pro-highspeed
                 badge:
@@ -1436,11 +1467,13 @@
         defaultThinkingEfforts: {}
         pool:
           enabled: true
-          targetModelId: ""
+          targetModelId: deepseek-v4.1-flash
           probeInputTokens: 0
           memberAccountIds:
             - e44e62b3dcc4513e9130fab5
           autoCheckin: false
+          growthRedeem: true
+          growthActivity: true
           orderAccountIds: []
 - id: permission
   name: "@deepseek-ai/dsh-permission-presets"
@@ -1461,3 +1494,5 @@
   config:
     fetchProvider: fs-quality-fetch
     searchProvider: ddg
+- id: computer-use-cua-driver-native
+  disabled: true

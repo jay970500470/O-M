@@ -1,0 +1,10 @@
+[
+  {
+    "id": "agents-anywhere-bridge-next",
+    "config": {
+      "dshHome": "C:\\Users\\jay\\.dsh",
+      "connectorSourceDir": "E:\\deepseek\\2\\DSH NEXT\\resources\\app.asar.unpacked\\node_modules\\@agents-anywhere\\dsh-bridge-next\\lib\\bundled-connector",
+      "uvPath": "E:\\deepseek\\2\\DSH NEXT\\resources\\app.asar.unpacked\\node_modules\\@dataiku\\uv-win32-x64\\bin\\uv.exe"
+    }
+  }
+]
