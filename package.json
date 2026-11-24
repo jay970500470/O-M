@@ -11,16 +11,8 @@
         "@deepseek-ai/dsh-experimental-cot-translation-bundle",
         "dsh-free-search",
         "dsh-mnemon",
-        "dshmarket",
-        "@agents-anywhere/dsh-bridge-next",
         "dsh-connect-workbuddy"
       ]
-    },
-    "desktopNextScheduleBundle": 2,
-    "desktopNextPlugins": 1,
-    "desktopNextOnboarding": {
-      "version": 1,
-      "outcome": "completed"
     }
   },
   "dependencies": {
