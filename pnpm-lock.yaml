@@ -15,8 +15,8 @@ importers:
         specifier: 1.4.13
         version: 1.4.13(@deepseek-ai/schemastery@3.19.0)
       dsh-connect-workbuddy:
-        specifier: 5.31.2
-        version: 5.31.2
+        specifier: 5.31.4
+        version: 5.31.4
       dsh-free-search:
         specifier: 0.9.82
         version: 0.9.82(@deepseek-ai/schemastery@3.19.0)
@@ -136,8 +136,8 @@ packages:
       '@deepseek-ai/schemastery': ^3.18.2
       react: ^18.2.0
 
-  dsh-connect-workbuddy@5.31.2:
-    resolution: {integrity: sha512-YmnkwdqDHCqm4uuce4vZlHTo13Pu1JnVbEO6Gu2dcldLlUhgQ8U9wMtoq9H9j4d69KGS8Y4lVVheFPYO4amzjw==}
+  dsh-connect-workbuddy@5.31.4:
+    resolution: {integrity: sha512-2wJ9/lWBX7S/EXbeehtMQ1wZWc3srNWV6YLyPNu3/0c+EtDAYQ7A2ZT0LXsTKCPx+7yRjyPpdDCsTIp72LsuUA==}
     engines: {node: ^22.19.0 || >=24.0.0}
     hasBin: true
     peerDependencies:
@@ -445,7 +445,7 @@ snapshots:
     dependencies:
       '@deepseek-ai/schemastery': 3.19.0
 
-  dsh-connect-workbuddy@5.31.2:
+  dsh-connect-workbuddy@5.31.4:
     dependencies:
       '@deepseek-ai/schemastery': 3.19.0
 

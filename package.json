@@ -11,19 +11,19 @@
         "@deepseek-ai/dsh-experimental-cot-translation-bundle",
         "dsh-free-search",
         "dsh-mnemon",
-        "dsh-connect-workbuddy",
         "@deepseek-ai/dsh-experimental-plugin-market-bundle",
         "dsh-codearts",
         "@deepseek-ai/dsh-subagent-codex",
         "@deepseek-ai/dsh-personalized-recommendations",
-        "@deepseek-ai/dsh-experimental-session-titles-bundle"
+        "@deepseek-ai/dsh-experimental-session-titles-bundle",
+        "dsh-connect-workbuddy"
       ]
     }
   },
   "dependencies": {
     "@deepseek-ai/dsh-subagent-codex": "0.2.2-rc.5",
     "dsh-codearts": "1.4.13",
-    "dsh-connect-workbuddy": "5.31.2",
+    "dsh-connect-workbuddy": "5.31.4",
     "dsh-free-search": "0.9.82",
     "dsh-mnemon": "0.5.50",
     "dsh-our-free-model": "^2.1.0"
