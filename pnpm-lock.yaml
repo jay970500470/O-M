@@ -24,8 +24,8 @@ importers:
         specifier: 0.5.50
         version: 0.5.50
       dsh-our-free-model:
-        specifier: ^2.1.0
-        version: 2.1.0(@deepseek-ai/schemastery@3.19.0)
+        specifier: link:C:/Users/jay/.dsh/plugins-src/dsh-our-free-model
+        version: link:../../plugins-src/dsh-our-free-model
 
 packages:
 
@@ -353,17 +353,6 @@ packages:
       '@deepseek-ai/dsh-app-boot':
         optional: true
 
-  dsh-our-free-model@2.1.0:
-    resolution: {integrity: sha512-52W78eb+htOGTCTtHnGUzOm5Izdt14DT8uN2qgY3VCiUQHVWd2OUuUpqeRLuBBvaW6B+MmI5BI+ms4jEqDAOwA==}
-    engines: {node: ^22.19.0 || >=24.0.0}
-    deprecated: OFM Fish package retired, not included in dsh-fish 1.0.0, and no longer maintained. Back up existing local data before any migration or removal.
-    peerDependencies:
-      '@deepseek-ai/cordis': ^4.0.2
-      '@deepseek-ai/dsh-commands': ^0.1.2-rc.1 || ^0.1.7-rc.2 || ^0.2.0-rc.1
-      '@deepseek-ai/dsh-credentials': ^0.1.2-rc.1 || ^0.1.7-rc.2 || ^0.2.0-rc.1
-      '@deepseek-ai/dsh-llm': ^0.1.2-rc.1 || ^0.1.7-rc.2 || ^0.2.0-rc.1
-      '@deepseek-ai/schemastery': ^3.18.4
-
   fflate@0.8.3:
     resolution: {integrity: sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==}
 
@@ -554,10 +543,6 @@ snapshots:
       fflate: 0.8.3
       yaml: 2.9.1
       zod: 4.6.7
-
-  dsh-our-free-model@2.1.0(@deepseek-ai/schemastery@3.19.0):
-    dependencies:
-      '@deepseek-ai/schemastery': 3.19.0
 
   fflate@0.8.3: {}
 
