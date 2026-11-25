@@ -1510,4 +1510,4 @@
   config:
     fetchTimeoutMs: 60000
     indexes:
-      - http://127.0.0.1:18765/index.json
+      - https://dshmarket.com/index.json
