@@ -1502,3 +1502,11 @@
       - glm-5.3-flash
     showSidebarPanel: false
     autoClaim: true
+
+# 插件市场索引源（Discover 标签页）
+# 来自 dshmarket.com，格式 format:1，6803 个插件
+- id: plugin-market
+  name: "@deepseek-ai/dsh-plugin-market"
+  config:
+    indexes:
+      - https://dshmarket.com/index.json
