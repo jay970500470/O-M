@@ -12,6 +12,7 @@ minimumReleaseAgeExclude:
   - dsh-mnemon-source-skills@0.5.16
   - dsh-mnemon-strategy-default-three-tier@0.5.15
   - dsh-mnemon@0.5.50
+  - dsh-codearts@1.4.13
 allowBuilds:
   "@google/genai@2.21.0": true
   protobufjs@7.6.6: true

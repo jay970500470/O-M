@@ -4,8 +4,8 @@
 - id: agent-default-model
   name: "@deepseek-ai/dsh-agent-default-model"
   config:
-    provider: workbuddy
-    model: deepseek-v4.1-flash
+    provider: raccoon
+    model: sn-deepseek-v4-1-flash-1017
 - id: ui-settings-account
   name: "@deepseek-ai/dsh-client-ui-settings-account"
   config:
@@ -1494,3 +1494,11 @@
   config:
     fetchProvider: fs-quality-fetch
     searchProvider: ddg
+- id: llm-codearts
+  name: dsh-codearts
+  config:
+    enabledModels:
+      - deepseek-v4.1-flash-1017
+      - glm-5.3-flash
+    showSidebarPanel: false
+    autoClaim: true

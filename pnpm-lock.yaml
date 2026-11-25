@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      dsh-codearts:
+        specifier: 1.4.13
+        version: 1.4.13(@deepseek-ai/schemastery@3.19.0)
       dsh-connect-workbuddy:
         specifier: 5.31.2
         version: 5.31.2
@@ -31,6 +34,22 @@ packages:
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
+
+  dsh-codearts@1.4.13:
+    resolution: {integrity: sha512-MOzKjJ6GXVNjQE1mJ6jQYUTqf0uFD4QmEyCl7rpM/Euf3827ptbAYNTduxWlYcA8aiyc4uRBRZSG7+O/Pp5XFA==}
+    engines: {node: ^22.19.0 || >=24.0.0}
+    hasBin: true
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.2
+      '@deepseek-ai/dsh-atomic-write': '>=0.1.2-rc.1 <0.3.0-0'
+      '@deepseek-ai/dsh-attachment': '>=0.1.2-rc.1 <0.3.0-0'
+      '@deepseek-ai/dsh-home-paths': '>=0.1.2-rc.1 <0.3.0-0'
+      '@deepseek-ai/dsh-host-webserver': '>=0.1.2-rc.1 <0.3.0-0'
+      '@deepseek-ai/dsh-llm': '>=0.1.2-rc.1 <0.3.0-0'
+      '@deepseek-ai/dsh-llm-pi-ai': '>=0.1.2-rc.1 <0.3.0-0'
+      '@deepseek-ai/dsh-settings': '>=0.1.2-rc.1 <0.3.0-0'
+      '@deepseek-ai/schemastery': ^3.18.2
+      react: ^18.2.0
 
   dsh-connect-workbuddy@5.31.2:
     resolution: {integrity: sha512-YmnkwdqDHCqm4uuce4vZlHTo13Pu1JnVbEO6Gu2dcldLlUhgQ8U9wMtoq9H9j4d69KGS8Y4lVVheFPYO4amzjw==}
@@ -281,6 +300,10 @@ snapshots:
       '@standard-schema/spec': 1.1.0
 
   '@standard-schema/spec@1.1.0': {}
+
+  dsh-codearts@1.4.13(@deepseek-ai/schemastery@3.19.0):
+    dependencies:
+      '@deepseek-ai/schemastery': 3.19.0
 
   dsh-connect-workbuddy@5.31.2:
     dependencies:
