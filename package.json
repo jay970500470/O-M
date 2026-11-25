@@ -12,7 +12,8 @@
         "dsh-free-search",
         "dsh-mnemon",
         "dsh-connect-workbuddy",
-        "dsh-codearts"
+        "dsh-codearts",
+        "@deepseek-ai/dsh-experimental-plugin-market-bundle"
       ]
     }
   },
