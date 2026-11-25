@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@deepseek-ai/dsh-subagent-codex':
+        specifier: 0.2.2-rc.5
+        version: 0.2.2-rc.5
       dsh-codearts:
         specifier: 1.4.13
         version: 1.4.13(@deepseek-ai/schemastery@3.19.0)
@@ -29,8 +32,90 @@ packages:
   '@deepseek-ai/cosmokit@1.9.0':
     resolution: {integrity: sha512-5O1S53mZiJyZYcvxxD0Qv1EY7qFPSxbGyD8CbVK6gw7W9FvcXZj2YIX1ZkOqyQQ3Xt2rFkZDHJv0+V3Zmmp8CA==}
 
+  '@deepseek-ai/dsh-brand@0.2.2-rc.5':
+    resolution: {integrity: sha512-jkWKCP1nu3silNQSjiBTrK48xmFK617xIhLiakNJURNtON3sjv7h1FxVydw9IhOBcdK4/LakKRoDlV/V8MjOGg==}
+    peerDependencies:
+      '@deepseek-ai/cordis': ~4.1.0
+
+  '@deepseek-ai/dsh-sdk-protocol@0.2.2-rc.5':
+    resolution: {integrity: sha512-cTpUbYEfKJJoPd31nQD6uP48j+JzlK/TbhtXuVa0y5zHKnXO7DjiP+zkf6tZYHwy6dAM1pIvI90fZXYCZMO9jQ==}
+    peerDependencies:
+      '@deepseek-ai/cordis': ~4.1.0
+      '@deepseek-ai/dsh-commands': 0.2.2-rc.5
+      '@deepseek-ai/dsh-llm': 0.2.2-rc.5
+      '@deepseek-ai/dsh-session': 0.2.2-rc.5
+      '@deepseek-ai/dsh-subagent': 0.2.2-rc.5
+      '@deepseek-ai/dsh-user-questions': 0.2.2-rc.5
+
+  '@deepseek-ai/dsh-subagent-codex@0.2.2-rc.5':
+    resolution: {integrity: sha512-QWjquz5ZIGv63xJ7mxP8LeqJ17Qc0zoe6fa7oTxmauH1wnpR7LUV+wVq8XCVQce59KaN/rdkEBzI3l44+LKgPA==}
+    peerDependencies:
+      '@deepseek-ai/cordis': ~4.1.0
+      '@deepseek-ai/dsh-llm': 0.2.2-rc.5
+      '@deepseek-ai/dsh-session': 0.2.2-rc.5
+      '@deepseek-ai/dsh-subagent': 0.2.2-rc.5
+      '@deepseek-ai/dsh-subprocess': 0.2.2-rc.5
+      '@deepseek-ai/dsh-timeout': 0.2.2-rc.5
+
+  '@deepseek-ai/dsh-tool-subagent@0.2.2-rc.5':
+    resolution: {integrity: sha512-qsOFFctyJxra65R4RFjfXkI7Eaom46rqDAHTa7vW1/buEXxMIqslgu4S2CafRBlcEuQ9cfhCn6a5H3aXH45DWg==}
+    peerDependencies:
+      '@deepseek-ai/cordis': ~4.1.0
+      '@deepseek-ai/dsh-agent': 0.2.2-rc.5
+      '@deepseek-ai/dsh-agent-preset-registry': 0.2.2-rc.5
+      '@deepseek-ai/dsh-llm': 0.2.2-rc.5
+      '@deepseek-ai/dsh-session': 0.2.2-rc.5
+      '@deepseek-ai/dsh-session-projection': 0.2.2-rc.5
+      '@deepseek-ai/dsh-subagent': 0.2.2-rc.5
+      '@deepseek-ai/dsh-system-prompt': 0.2.2-rc.5
+      '@deepseek-ai/dsh-tools': 0.2.2-rc.5
+    peerDependenciesMeta:
+      '@deepseek-ai/dsh-agent-preset-registry':
+        optional: true
+
   '@deepseek-ai/schemastery@3.19.0':
     resolution: {integrity: sha512-bDXoYQa7ghAhmdYD5VPlzKxEzJV/aKkz5l4V5h1u06z8GAPN1ROewSjvR9WiXhpa52E9fng8lpH5QdCRIQgnyQ==}
+
+  '@openai/codex@0.153.4':
+    resolution: {integrity: sha512-wbHDmit7S/YvBGVX1DQmk13xtWblZ2cApeJ/pB7xDZ10Cna+DZc5ij7f0F4OxdsXN4FW1oLT48OpogUI1+8Y2w==}
+    engines: {node: '>=16'}
+    hasBin: true
+
+  '@openai/codex@0.153.4-darwin-arm64':
+    resolution: {integrity: sha512-B1qhN3fa1ay0R0wGziXqgwSkB5icpYChNKHhtBHff/0UtSTC7z+l8aTtvMlGjH3E8HEvY3+njIJelM9CAAoVWg==}
+    engines: {node: '>=16'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@openai/codex@0.153.4-darwin-x64':
+    resolution: {integrity: sha512-vnSbbPzfoDZmmyzsxswsDDXQ06IVFBzkQU7/hroB3ji93Ok2utcsq8Psfk2tjF5r9mEx8RWFJhzuTGHG26/NDA==}
+    engines: {node: '>=16'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@openai/codex@0.153.4-linux-arm64':
+    resolution: {integrity: sha512-QKdjYLYV4hXIuUQDP3P6F4NXuWFoKo9WUoV4nAREIx55kiUyi8UsYdsVobkeXir5n/maEQgYMCKLHVma4rNPiw==}
+    engines: {node: '>=16'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@openai/codex@0.153.4-linux-x64':
+    resolution: {integrity: sha512-x1EcwBlY3AObM1VTUHNM2AzAJQsyreGdagpF+qFiYi/Oa30VBktvvG0C6tLtCzqW6hjZNWkGZQWmeVk7MuJKWg==}
+    engines: {node: '>=16'}
+    cpu: [x64]
+    os: [linux]
+
+  '@openai/codex@0.153.4-win32-arm64':
+    resolution: {integrity: sha512-/FBh42976ltF1kxDoPQBg1Q6+hwChRU5/sm5dfeC8kFVQMvOCGoGeY5d8rRZGVJE8XojlXo74VQb0sHowcfgBw==}
+    engines: {node: '>=16'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@openai/codex@0.153.4-win32-x64':
+    resolution: {integrity: sha512-lMkB43kJZH0VFr+hoXc11qqR7QtQIbkr07ALgj4urKL1osNyUyuy1iXd3Vzz2iCYvBUCSw7I0l/W1cEPGx9euQ==}
+    engines: {node: '>=16'}
+    cpu: [x64]
+    os: [win32]
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
@@ -287,6 +372,9 @@ packages:
     engines: {node: '>= 14.6'}
     hasBin: true
 
+  zod@4.6.6:
+    resolution: {integrity: sha512-4UmzQUF5fxvfcYHlbjBmejU+w+hbDnWFx4aS8kBx7nPBHcO2SqPbpAG8snbdg+Xse4pRefR98hgjFgIMCI/UhA==}
+
   zod@4.6.7:
     resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
@@ -294,10 +382,62 @@ snapshots:
 
   '@deepseek-ai/cosmokit@1.9.0': {}
 
+  '@deepseek-ai/dsh-brand@0.2.2-rc.5': {}
+
+  '@deepseek-ai/dsh-sdk-protocol@0.2.2-rc.5': {}
+
+  '@deepseek-ai/dsh-subagent-codex@0.2.2-rc.5':
+    dependencies:
+      '@deepseek-ai/dsh-brand': 0.2.2-rc.5
+      '@deepseek-ai/dsh-sdk-protocol': 0.2.2-rc.5
+      '@deepseek-ai/dsh-tool-subagent': 0.2.2-rc.5
+      '@deepseek-ai/schemastery': 3.19.0
+      '@openai/codex': 0.153.4
+    transitivePeerDependencies:
+      - '@deepseek-ai/dsh-agent'
+      - '@deepseek-ai/dsh-agent-preset-registry'
+      - '@deepseek-ai/dsh-commands'
+      - '@deepseek-ai/dsh-session-projection'
+      - '@deepseek-ai/dsh-system-prompt'
+      - '@deepseek-ai/dsh-tools'
+      - '@deepseek-ai/dsh-user-questions'
+
+  '@deepseek-ai/dsh-tool-subagent@0.2.2-rc.5':
+    dependencies:
+      '@deepseek-ai/schemastery': 3.19.0
+      zod: 4.6.6
+
   '@deepseek-ai/schemastery@3.19.0':
     dependencies:
       '@deepseek-ai/cosmokit': 1.9.0
       '@standard-schema/spec': 1.1.0
+
+  '@openai/codex@0.153.4':
+    optionalDependencies:
+      '@openai/codex-darwin-arm64': '@openai/codex@0.153.4-darwin-arm64'
+      '@openai/codex-darwin-x64': '@openai/codex@0.153.4-darwin-x64'
+      '@openai/codex-linux-arm64': '@openai/codex@0.153.4-linux-arm64'
+      '@openai/codex-linux-x64': '@openai/codex@0.153.4-linux-x64'
+      '@openai/codex-win32-arm64': '@openai/codex@0.153.4-win32-arm64'
+      '@openai/codex-win32-x64': '@openai/codex@0.153.4-win32-x64'
+
+  '@openai/codex@0.153.4-darwin-arm64':
+    optional: true
+
+  '@openai/codex@0.153.4-darwin-x64':
+    optional: true
+
+  '@openai/codex@0.153.4-linux-arm64':
+    optional: true
+
+  '@openai/codex@0.153.4-linux-x64':
+    optional: true
+
+  '@openai/codex@0.153.4-win32-arm64':
+    optional: true
+
+  '@openai/codex@0.153.4-win32-x64':
+    optional: true
 
   '@standard-schema/spec@1.1.0': {}
 
@@ -422,5 +562,7 @@ snapshots:
   fflate@0.8.3: {}
 
   yaml@2.9.1: {}
+
+  zod@4.6.6: {}
 
   zod@4.6.7: {}
